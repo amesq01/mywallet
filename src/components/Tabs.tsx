@@ -1,29 +1,28 @@
 'use client'
 
 import { House, PlusCircle, User } from '@phosphor-icons/react'
+import Link from 'next/link';
 
 import colors from 'tailwindcss/colors';
 
-type testeProps = {
-  setChangeComponent: (e: string) => void
-}
 
 
-export function Tabs({ setChangeComponent }: testeProps) {
+
+export function Tabs() {
   return (
-    <div className="fixed bottom-0 left-0  bg-white border w-full  flex h-15">
+    <div className="fixed bottom-0 left-0  bg-white border w-full  flex h-[60px]">
 
-      <button onClick={() => setChangeComponent('home')} className='hover:bg-slate-100 flex-1 flex justify-center items-center'>
+      <Link href='./' className='hover:bg-slate-100 flex-1 flex justify-center items-center'>
         <House size={24} />
-      </button>
+      </Link>
 
-      <button onClick={() => setChangeComponent('newExpense')} className='b-5 hover:bg-slate-100 flex-1 flex justify-center items-center relative'>
-        <PlusCircle size={48} weight="fill" color={colors.green[600]} />
-      </button>
+      <Link href='./newexpense' className='b-5 hover:bg-slate-100 flex-1 flex justify-center items-center relative'>
+        <PlusCircle size={48} weight="fill" color={colors.slate[800]} />
+      </Link>
 
-      <button onClick={() => setChangeComponent('profile')} className='hover:bg-slate-100 flex-1 flex justify-center items-center'>
+      <Link href='./profile' className='hover:bg-slate-100 flex-1 flex justify-center items-center'>
         <User size={24} />
-      </button>
+      </Link>
 
     </div>
   )

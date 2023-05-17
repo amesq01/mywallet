@@ -1,3 +1,5 @@
+import { Header } from '../components/Header'
+import { Tabs } from '../components/Tabs'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -17,10 +19,11 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
+        <Header />
 
-        <h1>Testando</h1>
 
         {children}
+        <Tabs />
 
       </body>
     </html>
