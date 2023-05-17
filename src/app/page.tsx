@@ -1,12 +1,16 @@
-
+'use client'
 
 
 export default function Home() {
 
+  function handleAlert(){
+    alert('hello world')
+  }
+
   return (
     <div className="flex flex-col pt-[120px] pb-[60px] w-full  ">
 
-      <div onClick={()=>alert('teste')} className="flex flex-col px-2 border-b-[1px] border-b-gray-800 py-1 cursor-pointer">
+      <div onClick={handleAlert} className="flex flex-col px-2 border-b-[1px] border-b-gray-800 py-1 cursor-pointer">
 
         <strong className=" line-clamp-1 text-blue-600 text-sm ">BETANIA - NOTEBOOK E IMPRESSORA - CASAS BAHIA</strong>
 
