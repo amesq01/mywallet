@@ -3,12 +3,12 @@
 
 export default function Home() {
 
-  function handleAlert(){
+  function handleAlert() {
     alert('hello world')
   }
 
   return (
-    <div className="flex flex-col pt-[120px] pb-[60px] w-full  ">
+    <div className="flex flex-col pt-[120px] pb-[60px] w-full bg-white ">
 
       <div onClick={handleAlert} className="flex flex-col px-2 border-b-[1px] border-b-gray-800 py-1 cursor-pointer">
 
